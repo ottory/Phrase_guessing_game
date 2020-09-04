@@ -98,7 +98,7 @@ function checkWin() {
        
         
          if (classLetter.length === classShow.length) {                            
-                overlay.className = 'win';                                        //add the overlay to the win class                                     //reset game
+                overlay.className = 'win';                                        //add the overlay to the win class                                   
                 overlay.firstElementChild.textContent = "You win!";              //change the text of the button to read "You Win"
                 overlay.style.display = 'flex';                                 //overlay display to flex
                 startGameButton.style.display = 'none';                         //hide the start button 
