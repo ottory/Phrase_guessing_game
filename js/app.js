@@ -94,10 +94,11 @@ const checkLetter = button => {
 function checkWin() {
         const classLetter = document.querySelectorAll('.letter');                 //get all the class="letter"
         const classShow = document.querySelectorAll('.show');                     // get all the class="show"
-
+        const hidePhrase = document.getElementById('phrase');                     // grab the phrase
        
         
-         if (classLetter.length === classShow.length) {                            
+         if (classLetter.length === classShow.length) { 
+                hidePhrase.style.display = 'none';                                 //hide the phrase
                 overlay.className = 'win';                                        //add the overlay to the win class                                   
                 overlay.firstElementChild.textContent = "You win!";              //change the text of the button to read "You Win"
                 overlay.style.display = 'flex';                                 //overlay display to flex
@@ -105,7 +106,8 @@ function checkWin() {
                 overlay.appendChild(resetGameButton);                           //add resetButton to page
                            
         } 
-        else if (missedGuesses >= 5) {                                //if missedGuessed is >= 5 do something
+        else if (missedGuesses >= 5) {                                         //if missedGuessed is >= 5 do something
+                hidePhrase.style.display = 'none';                             //hide the phrase
                 overlay.className = 'lose';                           //change the overlay class name to lose                 
                 overlay.firstElementChild.textContent = "Sorry, not a winner";   //change the text of the button to "you lost"
                 overlay.style.display = 'flex';                       //overlay display to flex

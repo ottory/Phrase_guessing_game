@@ -94,10 +94,14 @@ button {
 
 .show {
   color: white;
-  background-color:  #78CF82;
+  background-color:  #5b85b7;
+  
   font-size: var(--font-size-medium);
   height: 65px;
   width: 65px;
+  transition: 2s, 2s, .5s; 
+  transform: rotate(90deg); 
+  transform: rotate(360deg);
   padding: 20px 1px 0 1px;
   margin-right: 2px;
   
